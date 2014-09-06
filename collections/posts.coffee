@@ -2,12 +2,8 @@
   schema:
     content:
       type: String
-    imageId:
+    imageId: 
       type: String
-      optional: true
-    url:
-      type: String
-      optional: true
     category:
       type: String
       #allowedValues: ['wild', 'raise', 'herd', 'more']
@@ -26,6 +22,7 @@ if Meteor.isClient
     newPost:
       onSuccess: (a, b, template) ->
         Session.set 'uploaded', false
+        $('[name="imageId"]').val('')
 
 Posts.allow
 

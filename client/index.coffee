@@ -56,7 +56,7 @@ Template.newPost.events
     FS.Utility.eachFile e, (file) ->
       Images.insert file, (err, fileObj) ->
         if not err
-          $('#newPost').find('input[name="url"]').val fileObj.url()
+          #$('#newPost').find('input[name="url"]').val fileObj.url()
           $('#newPost').find('input[name="imageId"]').val fileObj._id
           Session.set 'uploaded', true
           handle = setInterval ( ->

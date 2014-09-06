@@ -16,5 +16,8 @@ cfs:standard-packages
 cfs:file
 cfs:filesystem
 mrt:bootstrap-3
-cfs:gridfs
 cfs:s3
+mrt:accounts-ui-bootstrap-3
+accounts-facebook
+cfs:gridfs
+

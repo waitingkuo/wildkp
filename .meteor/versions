@@ -1,3 +1,6 @@
+accounts-base@1.1.0-rc0
+accounts-facebook@1.0.0
+accounts-oauth@1.1.0-rc0
 aldeed:autoform@1.0.0
 aldeed:collection2@1.0.0
 aldeed:simple-schema@1.0.1
@@ -34,6 +37,7 @@ ctl@1.0.1
 ddp@1.0.8
 deps@1.0.2
 ejson@1.0.1
+facebook@1.1.0-rc0
 fastclick@1.0.0-cordova1
 follower-livedata@1.0.1
 geojson-utils@1.0.0
@@ -49,6 +53,7 @@ iron:router@0.9.3
 jquery@1.0.0
 json@1.0.0
 livedata@1.0.8
+localstorage@1.0.0
 logging@1.0.2-cordova2
 meteor-platform@1.1.0-rc0
 meteor@1.1.0-rc1
@@ -57,8 +62,11 @@ minimongo@1.0.3-rc1
 mobile-status-bar@1.0.0-cordova2
 mongo-livedata@1.0.4
 mongo@1.0.4-rc1
+mrt:accounts-ui-bootstrap-3@0.3.3
 mrt:bootstrap-3@0.3.8
 mrt:moment@2.6.0
+oauth2@1.1.0-rc0
+oauth@1.1.0-rc1
 observe-sequence@1.0.2
 ordered-dict@1.0.0
 raix:eventemitter@0.0.1
@@ -68,6 +76,7 @@ reactive-var@1.0.1
 reload@1.1.0-rc1
 retry@1.0.0
 routepolicy@1.0.0-cordova1
+service-configuration@1.0.1
 session@1.0.1
 spacebars-compiler@1.0.2
 spacebars@1.0.1

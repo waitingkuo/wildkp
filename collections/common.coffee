@@ -1,6 +1,9 @@
 #imageStore = new FS.Store.FileSystem 'images', {path: '~/uploads'}
 
-uploadTo = 'mongodb'
+if Meteor.settings and Meteor.settings.public and Meteor.settings.public.uploadTo
+  uploadTo = Meteor.settings.public.uploadTo
+else
+  uploadTo = 'mongodb'
 
 # upload files to S3
 if uploadTo is 'S3'
@@ -9,7 +12,7 @@ if uploadTo is 'S3'
     imageStore = new FS.Store.S3 'images',
       accessKeyId: Meteor.settings.aws.accessKeyId
       secretAccessKey: Meteor.settings.aws.secretAccessKey
-      bucket: Meteor.seetings.aws.bucket
+      bucket: Meteor.settings.aws.bucket
 
     @Images = new FS.Collection 'images',
       stores: [imageStore]

@@ -16,13 +16,15 @@ template(name="index")
 
 template(name="header")
   nav.navbar.navbar-default.navbar-fixed-top(role="navigaion")
-    div(style="height: 60px; background: white;")
+    div.top-bar(style="height: 60px; background: white;")
       .container
         .logo 柯P野生百科
+      //if currentUser
+      //  .picture
+       //   img(src="{{currentUser.profile.picture}}")
+      //+loginButtons
     .container(style="height: 50px; width:900px;")
-      //.navbar-header
       ul.nav.navbar-nav
-        //li.active
         li 
           //a(href="{{pathFor 'index'}}") 全部柯P
           a.cat 全部柯P
@@ -54,7 +56,7 @@ template(name="newPost")
 
     +autoForm collection="Posts" id="newPost" type="insert"
       input.file(type="file")
-      +afFieldInput name="url" type="hidden"
+      //+afFieldInput name="url" type="hidden"
       +afFieldInput name="imageId" type="hidden"
       br
       +afFieldInput name="category"
