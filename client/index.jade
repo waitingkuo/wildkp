@@ -1,0 +1,88 @@
+template(name="index")
+  +header
+  br
+  br
+  .container
+    .all-posts
+      .posts
+        +newPost
+        +posts
+      .posts
+        +posts2
+
+  br
+  br
+  br
+
+template(name="header")
+  nav.navbar.navbar-default.navbar-fixed-top(role="navigaion")
+    div(style="height: 60px; background: white;")
+      .container
+        .logo 柯P野生百科
+    .container(style="height: 50px; width:900px;")
+      //.navbar-header
+      ul.nav.navbar-nav
+        //li.active
+        li 
+          //a(href="{{pathFor 'index'}}") 全部柯P
+          a.cat 全部柯P
+        li
+          //a(href="{{pathFor 'index'}}") 野生柯P
+          a.cat(data-category="wild") 野生柯P
+        li
+          //a(href="{{pathFor 'index'}}") 養殖柯P
+          a.cat(data-category="raise") 養殖柯P
+        li
+          //a(href="{{pathFor 'index'}}") 牧放柯P
+          a.cat(data-category="herd") 牧放柯P
+        li
+          //a(href="{{pathFor 'index'}}") 更多柯P
+          a.cat(data-category="more") 更多柯P
+      
+  br
+  br
+  br
+  br
+  br
+  br
+
+template(name="newPost")
+  .new-post.grid
+
+    if uploaded
+      img(src="{{url}}" width="300")
+
+    +autoForm collection="Posts" id="newPost" type="insert"
+      input.file(type="file")
+      +afFieldInput name="url" type="hidden"
+      +afFieldInput name="imageId" type="hidden"
+      br
+      +afFieldInput name="category"
+      br
+      +afFieldInput name="content" rows="3"
+      br
+      button.btn.btn-primary(type="submit") 補獲
+
+
+template(name="posts")
+
+    each posts
+      +post
+
+template(name="posts2")
+  each posts2
+    +post
+
+template(name="post")
+  .post.card.grid
+    .image
+      img(src="{{url}}" width="300")
+    //br
+    .category
+      span.label(class="{{catLabel}}") {{catName}}
+    br
+    .content {{content}}
+
+    
+  
+
