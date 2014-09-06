@@ -3,6 +3,8 @@ wildkp
 
 野生柯P百科
 
+[DEMO](http://wildkp.meteor.com)
+
 
 ### Development
 
