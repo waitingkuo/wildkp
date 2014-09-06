@@ -6,10 +6,14 @@ wildkp
 
 ### Development
 
-  meteor
+We use mongo to store image in the developement enviroment
+
+    meteor
     
     
 ### Deploy
+
+We use S3 to store image in the production enviroment
 
 Add settings.json first
     
